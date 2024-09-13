@@ -1,4 +1,4 @@
-from veiculo import veiculo
+from Veiculo import veiculo
 class carro(veiculo):
     def __init__(self, marca, modelo, placa, ano, n_portas):
         super().__init__(marca, modelo, placa, ano)
