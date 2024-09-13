@@ -5,6 +5,6 @@ class carro(veiculo):
         self.__n_portas = n_portas
     #Override - Sobrescrever o método __str__()
     def __str__(self):
-        ret = super().__str__()
-        return f'''{ret}
- - Num. Portas: {self.__n_portas}'''
+        retorno = super().__str__()
+        return f'''{retorno}
+ - Nº de Portas: {self.__n_portas}'''

@@ -3,30 +3,31 @@ from Moto import moto
 from Caminhao import caminhao
 from Veiculo import veiculo
 #BD em memória
-listaveiculos = [carro("Hyundai", "HB20", "ABC", 2023, 4),
+listaveiculos = [
+    carro("Hyundai", "HB20", "ABC", 2023, 4),
     moto("Yamaha", "Lander", "DEF", 2008, 250),
     caminhao("Volvo", "FH540", "GHI", 2015, 80)
 ]
 
 def cadastrar():
-    print("Qual o tipo de veículo: (1) carro - (2) moto - (3) Caminhão")
+    print("Qual o tipo de Veículo: (1) Carro - (2) Moto - (3) Caminhão")
     tipo = input()
-    print("Digite a marca:")
+    print("Digite a Marca:")
     marca = input()
-    print("Digite o modelo:")
+    print("Digite o Modelo:")
     modelo = input()
-    print("Digite o placa:")
+    print("Digite a Placa:")
     placa = input()
     print("Digite o Ano:")
     ano = input()
     if tipo == "1":
-        nPortas = input("Digite o número de portas: ")
+        nPortas = input("Digite o número de Portas: ")
         veiculoAdd = carro(marca, modelo ,placa, ano, nPortas)
     elif tipo == "2":
-        cilindradas = input("Digite as cilindradas: ")
+        cilindradas = input("Digite as Cilindradas: ")
         veiculoAdd = moto(marca, modelo, placa, ano, cilindradas)
     elif tipo == "3":
-        capCarga = input("Digite a capacidade de carga: ")
+        capCarga = input("Digite a capacidade de Carga: ")
         veiculoAdd = caminhao(marca, modelo, placa, ano, capCarga)
     listaveiculos.append(veiculoAdd)
 
@@ -42,7 +43,7 @@ def listar():
 
 def excluir():
     listar()
-    print("Digite a placa que deseja excluir")
+    print("Digite a Placa que deseja excluir")
     placa = input()
     encontrou = False
     for veiculo in listaveiculos:
@@ -57,7 +58,7 @@ def excluir():
 
 
 while True:
-    print("Escolha uma das opções:")
+    print("Escolha uma das Opções:")
     print("1 - Cadastrar Veículo")
     print("2 - Listar Veículos")
     print("3 - Excluir Veículo")
